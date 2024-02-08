@@ -447,24 +447,24 @@
                   <div class="card-body">
                     <h5 class="card-title">Primary Education</h5>
                     <p class="card-text">2006-2011
-                      <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th>Institute</th>
-                            <th>Qualification</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>WP/Jaya Mahamathya Vidyalaya, Athurugiriya</td>
-                            <td>Grade 5 Scholarship Examination</td>
-                          </tr>
-                          <tr>
-                            <td>WP/Jaya Vidyaraja Maha Vidyalaya, Hokandara</td>
-                            <td>Grade 3</td>
-                          </tr>
-                        </tbody>
-                      </table> 
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Institute</th>
+                          <th>Qualification</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>WP/Jaya Mahamathya Vidyalaya, Athurugiriya</td>
+                          <td>Grade 5 Scholarship Examination</td>
+                        </tr>
+                        <tr>
+                          <td>WP/Jaya Vidyaraja Maha Vidyalaya, Hokandara</td>
+                          <td>Grade 3</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                   <div class="card-footer">
                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -514,57 +514,113 @@
       <div class="card">
         <div class="card h-100">
           <div class="profile-card__img">
-            <img src="ceb.png" alt="profile card">
+            <img src="ucsc.png" alt="profile card">
           </div>
           <div class="card-body">
             <h4>Bachelor of Science Information Systems</h4>
             <h5>University of Colombo School of Computing</h5>
-            <p class="card-text">2020-2024</p> 
+            <p class="card-text">2020-2024</p>
             <h4>Modules Followed</h4>
-            <ol>Year 01</ol>
-            
+            <p>Year 01</p>
+            <ol>
+              <li>Programming and Problem Solving</li>
+              <li>Computer Systems</li>
+              <li>Information Systems Management</li>
+              <li>Introduction to Management</li>
+              <li>Discrete Mathematics</li>
+              <li>Interactive Media Design</li>
+              <li>Financial Accounting</li>
+              <li>Programming for Web Application Development</li>
+              <li>Database Management</li>
+              <li>Software Engineering</li>
+              <li>Probability and Statistics</li>
+              <li>Organizational Behavior and Society</li>
+              <li>Data Structures and Algorithms I</li>
+              <li>Fundamentals of Economics</li>
+            </ol>
+
+            <p>Year 02</p>
+            <ol>
+              <li>Systems Analysis and Design</li>
+              <li>Digital Marketing</li>
+              <li>Rapid Application Development</li>
+              <li>Business Statistics</li>
+              <li>Business Process Management</li>
+              <li>Graphics and Visualization</li>
+              <li>Business Process Re-engineering</li>
+              <li>Enhancement III (Entrepreneurship)</li>
+              <li>Group Project I (Blitz)</li>
+              <li>IT Project Management</li>
+              <li>Information Systems Security</li>
+              <li>Data Structures and Algorithms II</li>
+              <li>Computer Networks</li>
+              <li>e-Business Strategies</li>
+              <li>Community Informatics (ICT for Development)</li>
+            </ol>
+
+            <p>Year 03</p>
+            <ol>
+              <li>Enterprise Resource Planning System</li>
+              <li>Human Computer Interaction</li>
+              <li>Software Quality Assurance</li>
+              <li>Professional Practice</li>
+              <li>IT Procurement Management</li>
+              <li>Middleware Architecture</li>
+              <li>Group Project II (BookShelf)</li>
+              <li>Enterprise Applications</li>
+              <li>Database Management System II</li>
+              <li>E-Learning and Instructional Design</li>
+            </ol>
 
           </div>
-
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="popup-container">Close</button>
           </div>
         </div>
       </div>
-  </div>
 
-  <script>
-    function smoothScroll(id) {
-      const el = document.getElementById(id.substring(1));
-      if (el) {
-        el.scrollIntoView({
-          behavior: 'smooth'
+    </div>
+
+    <script>
+      function smoothScroll(id) {
+        const el = document.getElementById(id.substring(1));
+        if (el) {
+          el.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      }
+
+      // Get all elements with the class 'popup-trigger'
+      var triggers = document.getElementsByClassName('popup-trigger');
+
+      // Loop through the NodeList and bind a click event listener to each
+      for (var i = 0; i < triggers.length; i++) {
+        triggers[i].addEventListener('click', function () {
+          var popupId = this.dataset.popupId;
+          var popupElement = document.getElementById(popupId);
+          popupElement.style.display = 'block';
         });
       }
-    }
 
-    // Get all elements with the class 'popup-trigger'
-var triggers = document.getElementsByClassName('popup-trigger');
+      // Close the popup when clicking on the close button
+      document.addEventListener('click', function (event) {
+        if (event.target.matches('.popup-close')) {
+          var popup = event.target.closest('.popup-container');
+          popup.style.display = 'none';
+        }
+      });
 
-// Loop through the NodeList and bind a click event listener to each
-for (var i =  0; i < triggers.length; i++) {
-  triggers[i].addEventListener('click', function() {
-    var popupId = this.dataset.popupId;
-    var popupElement = document.getElementById(popupId);
-    popupElement.style.display = 'block';
+      document.addEventListener('DOMContentLoaded', function() {
+  var closeButton = document.querySelector('.btn-secondary'); // Adjust the selector if needed
+  closeButton.addEventListener('click', function() {
+    document.getElementById('popup1').style.display = 'none';
   });
-}
-
-// Close the popup when clicking on the close button
-document.addEventListener('click', function(event) {
-  if (event.target.matches('.popup-close')) {
-    var popup = event.target.closest('.popup-container');
-    popup.style.display = 'none';
-  }
 });
 
 
-  </script>
+
+    </script>
 
 </body>
 
