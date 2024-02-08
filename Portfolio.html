@@ -15,6 +15,8 @@
   <script src="https://kit.fontawesome.com/dd5559ee21.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet">
 
 
@@ -47,7 +49,7 @@
           </a>
         </div>
         <div class="navLink">
-          <a href="#">
+          <a href="#education">
             <div><i class="fa-brands fa-app-store-ios"></i></div>
             <div class="navLabel">Education</div>
           </a>
@@ -334,7 +336,7 @@
                 <div class="profile-card-ctr">
                   <div>
                     <a href="" class="no-underline"></a>
-                      <button class="profile-card__button button--blue js-message-btn">Internship Project</button>
+                    <button class="profile-card__button button--blue js-message-btn">Internship Project</button>
                   </div>
 
                   <button class="profile-card__button button--orange">Contact Supervisor</button>
@@ -353,13 +355,13 @@
     </section>
   </div>
 
-  <div id="experience" style="z-index: -999;">
+  <div id="education" style="z-index: -999;">
     <!-- About Me 1 - HCF Bootstrap 5 Component -->
     <section class="bg-light py-5 py-xl-6">
       <div class="container mb-4 mb-md-5 mb-xl-6">
         <div class="row justify-content-md-center">
           <div class="wrapper">
-            <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
               <div class="col">
                 <div class="card h-100">
                   <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
@@ -367,6 +369,36 @@
                   <div class="card-body">
                     <h5 class="card-title">Higher Education</h5>
                     <p class="card-text">2020-To Date</p>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Institute</th>
+                          <th>Qualification</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="popup-trigger" data-popup-id="popup1">
+                          <td>University of Colombo School of Computing</td>
+                          <td>BSc. Information Systems</td>
+                        </tr>
+                        <tr>
+                          <td>Sri Lanka Law College</td>
+                          <td>Attornry-At-Law</td>
+                        </tr>
+                        <tr>
+                          <td>SITC Campus</td>
+                          <td>Dip. in Psychology and Counseling</td>
+                        </tr>
+                        <tr>
+                          <td>SITC Campus</td>
+                          <td>Dip. in Human Resource Management and Administration</td>
+                        </tr>
+                        <tr>
+                          <td> Official(ISC)<sup>2</sup>Cybersecurity(CC)</td>
+                          <td> Official(ISC)2 Certified in Cybersecurity(CC)</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                   <div class="card-footer">
                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -380,6 +412,28 @@
                   <div class="card-body">
                     <h5 class="card-title">Secondary Education</h5>
                     <p class="card-text">2011-2019</p>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Institute</th>
+                          <th>Qualification</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Visakha Vidyalaya, Colombo 05</td>
+                          <td>GCE Advanced Level</td>
+                        </tr>
+                        <tr>
+                          <td>St.Paul's Girls' School Milagiriya, Colombo 04</td>
+                          <td>GCE Ordinary Level</td>
+                        </tr>
+                        <tr>
+                          <td> Cambridge University</td>
+                          <td>Business English Certificate Preliminary</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                   <div class="card-footer">
                     <small class="text-muted">Last updated 3 mins ago</small>
@@ -393,15 +447,33 @@
                   <div class="card-body">
                     <h5 class="card-title">Primary Education</h5>
                     <p class="card-text">2006-2011
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Institute</th>
+                            <th>Qualification</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>WP/Jaya Mahamathya Vidyalaya, Athurugiriya</td>
+                            <td>Grade 5 Scholarship Examination</td>
+                          </tr>
+                          <tr>
+                            <td>WP/Jaya Vidyaraja Maha Vidyalaya, Hokandara</td>
+                            <td>Grade 3</td>
+                          </tr>
+                        </tbody>
+                      </table> 
                   </div>
                   <div class="card-footer">
                     <small class="text-muted">Last updated 3 mins ago</small>
                   </div>
                 </div>
               </div>
-            </div> -->
-            <div class="content">
-              <!-- card -->
+            </div>
+            <!-- <div class="content">
+            
               <div class="card">
           
                   <div class="icon"><i class="material-icons md-36">face</i></div>
@@ -409,8 +481,7 @@
                   <p class="text">Click to see or edit your profile page.</p>
           
               </div>
-              <!-- end card -->
-              <!-- card -->
+             
               <div class="card">
           
                   <div class="icon"><i class="material-icons md-36">favorite_border</i></div>
@@ -418,8 +489,7 @@
                   <p class="text">Check all your favourites in one place.</p>
           
               </div>
-              <!-- end card -->
-              <!-- card -->
+              
               <div class="card">
           
                   <div class="icon"><i class="material-icons md-36"></i></div>
@@ -427,16 +497,41 @@
                   <p class="text">Add or change your contacts and links.</p>
           
               </div>
-              <!-- end card -->
-          
-          </div>
-          </div>
+              end card -->
+
           </div>
         </div>
-
       </div>
   </div>
+
+  </div>
+  </div>
   </section>
+  </div>
+
+  <div id="popup1" class="popup-container">
+    <div class="popup-content">
+      <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      <button class="popup-close">Close</button>
+    </div>
   </div>
 
   <script>
@@ -448,6 +543,27 @@
         });
       }
     }
+
+    // Get all elements with the class 'popup-trigger'
+var triggers = document.getElementsByClassName('popup-trigger');
+
+// Loop through the NodeList and bind a click event listener to each
+for (var i =  0; i < triggers.length; i++) {
+  triggers[i].addEventListener('click', function() {
+    var popupId = this.dataset.popupId;
+    var popupElement = document.getElementById(popupId);
+    popupElement.style.display = 'block';
+  });
+}
+
+// Close the popup when clicking on the close button
+document.addEventListener('click', function(event) {
+  if (event.target.matches('.popup-close')) {
+    var popup = event.target.closest('.popup-container');
+    popup.style.display = 'none';
+  }
+});
+
 
   </script>
 
