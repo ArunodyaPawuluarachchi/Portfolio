@@ -29,16 +29,14 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <script>
-    // Initialization for ES Users
     import { Carousel, initMDB } from "mdb-ui-kit";
 
     initMDB({ Carousel });
   </script>
-
-
 </head>
 
 <body>
+  <!--Navigation Bar-->
   <div class="position-fixed text-uppercase mb-2 p-2 start-0 text-center top-0 w-100" role="navigation"
     style="z-index:  9999;">
     <div class="smallContainer p-3 shadow-lg rounded">
@@ -61,7 +59,6 @@
             <div class="navLabel">Education</div>
           </a>
         </div>
-
         <div class="navLink">
           <a href="#skills">
             <div><i class="fa fa-laptop" aria-hidden="true"></i></div>
@@ -83,9 +80,9 @@
       </div>
     </div>
   </div>
-
-  <div class="vh-100 d-flex align-items-center" style="background-color: #A9C9FF;
-  background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);">
+  <!--Landing Page-->
+  <div class="vh-100 d-flex align-items-center"
+    style="background-color: #A9C9FF; background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);">
     <div class="container" style="height: 100px;">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
@@ -95,6 +92,7 @@
       </div>
     </div>
   </div>
+  <!--ABOUT Page-->
   <div id="about" style="z-index: -999;">
     <section class="bg-light py-5 py-xl-6">
       <div class="container mb-4 mb-md-5 mb-xl-6">
@@ -104,7 +102,6 @@
               <div class="profile-card__img">
                 <img src="me.png" alt="profile card">
               </div>
-
               <div class="profile-card__cnt js-profile-cnt">
                 <div class="profile-card__name">Arunodya Pawuluarachchi</div>
                 <div class="profile-card__txt">Software Engineer from <strong>Sri Lanka</strong></div>
@@ -114,10 +111,7 @@
                       <use xlink:href="#icon-location"></use>
                     </svg>
                   </span>
-                  <span class="profile-card-loc__txt">
-                    Colombo
-                  </span>
-
+                  <span class="profile-card-loc__txt">Colombo</span>
                 </div>
                 <p style="text-align: justify;">I'm a passionate software engineer hailing from a top university nestled
                   on a beautiful island, renowned not only locally but globally for its academic excellence. With a
@@ -126,7 +120,6 @@
                   honing my skills in coding, debugging, and crafting innovative solutions. Eager to contribute my
                   expertise to dynamic teams, I thrive in collaborative environments where creativity and technical
                   prowess intersect to drive meaningful change.</p>
-
                 <div class="profile-card-social">
                   <a href="https://www.linkedin.com/in/arunodya-pawuluarachchi-528b7b21b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     class="profile-card-social__item linkedin" target="_blank">
@@ -685,68 +678,58 @@
   </section>
   </div>
 
-  <div id="contact" style="z-index: -999;">
+  <div id="contact" style="z-index: -999; display: flex; justify-content: center; align-items: center; height:  100vh;">
     <section class="bg-light py-5 py-xl-6">
-        <div class="container mb-4 mb-md-5 mb-xl-6 d-flex justify-content-center align-items-center" style="min-height:  100vh;">
-            <div class="wrapper" >
-                <section class="mb-4">
-                    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>
-                    <div class="row">
-                        <div class="col-md-9 mb-md-0 mb-5">
-                            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="name" class="">Your name</label>
-                                            <input type="text" id="name" name="name" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email" class="">Your email</label>
-                                            <input type="text" id="email" name="email" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="subject" class="">Subject</label>
-                                            <input type="text" id="subject" name="subject" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="message">Your message</label>
-                                            <textarea type="text" id="message" name="message" rows="2"
-                                                class="form-control md-textarea"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="text-center text-md-left">
-                                <button type="submit" class="btn btn-primary" form="contact-form">Send</button>
-                            </div>
-                            <div class="status"></div>
-                        </div>
-                        <div class="col-md-3 text-center">
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                                    <p>+94  703966083</p>
-                                </li>
-                                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                                    <p>arunodyapawuluarachchi@gmail.com</p>
-                                </li>
-                            </ul>
-                        </div>
+        <div class="container mb-4 mb-md-5 mb-xl-6" style="min-height:100vh; padding-left: ;">
+        <div class="wrapper" style="align-content:center; padding-left:100px;">
+          <section class="mb-4">
+            <h2 class="">CONTACT ME</h2>
+            <div class="row">
+              <div class="col-md-9 mb-md-0 mb-5">
+                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name" class="">Your name</label>
+                        <input type="text" id="name" name="name" class="form-control">
+                      </div>
                     </div>
-                </section>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="email" class="">Your email</label>
+                        <input type="text" id="email" name="email" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="subject" class="">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea type="text" id="message" name="message" rows="2"
+                          class="form-control md-textarea"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="text-center text-md-left">
+                  <button type="submit" class="btn btn-primary" form="contact-form">Send</button>
+                </div>
+                <div class="status"></div>
+              </div>
             </div>
+          </section>
         </div>
+      </div>
     </section>
-</div>
+  </div>
   <div id="popup">
     <div id="popup1" class="popup-container">
       <div class="popup-content">
