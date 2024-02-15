@@ -3,8 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require_once 'C:\Users\Acer\vendor\autoload.php';
-
+require './PHPMailer/src/Exception.php';
+require './PHPMailer/src/PHPMailer.php';
+require './PHPMailer/src/SMTP.php';
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -19,15 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Server settings
-        $mail->SMTPDebug = 2; // for detailed debug output
+        $mail->SMTPDebug =  2; // for detailed debug output
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->SMTPSecure = ssl;
-        $mail->Port = 465;
+        $mail->SMTPSecure = 'ssl'; // Enclosed in quotes
+        $mail->Port =  465;
 
+        // Replace with your actual Gmail email and password, ideally stored in a secure place
         $mail->Username = 'arunodyapawuluarachchi@gmail.com'; // YOUR gmail email
-        $mail->Password = 'cqwd nfvz teko xeuc'; // YOUR gmail password
+        $mail->Password = 'qnsi mwbw nlvq lhxl'; // YOUR gmail password
 
         // Sender and recipient settings
         $mail->setFrom($email, $name);
