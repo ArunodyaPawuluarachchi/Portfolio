@@ -20,23 +20,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // Server settings
-        $mail->SMTPDebug =  2; // for detailed debug output
+        $mail->SMTPDebug = 0; // Disable debugging in production
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'ssl'; // Enclosed in quotes
-        $mail->Port =  465;
+        $mail->SMTPSecure = 'tls'; // Change to 'tls'
+        $mail->Port = 587; // Update port for 'tls'
 
-        // Replace with your actual Gmail email and password, ideally stored in a secure place
+        // Replace with your actual Gmail email and password, ideally stored securely
         $mail->Username = 'arunodyapawuluarachchi@gmail.com'; // YOUR gmail email
-        $mail->Password = 'qnsi mwbw nlvq lhxl'; // YOUR gmail password
+        $mail->Password = 'djci ewry moac wmvk'; // YOUR gmail password
 
         // Sender and recipient settings
         $mail->setFrom($email, $name);
         $mail->addAddress('arunodyapawuluarachchi@gmail.com', 'Arunodya'); // Change to your email and name
 
         // Setting the email content
-        $mail->isHTML(true);
+        $mail->isHTML(true); 
         $mail->Subject = $subject;
         $mail->Body = nl2br($message);
         $mail->AltBody = strip_tags($message);
