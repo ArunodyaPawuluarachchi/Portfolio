@@ -223,8 +223,10 @@
   
   .icon {
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    /*width: 1em;
+    height: 1em;*/
+    width: 20px;
+    height: 20px;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
