@@ -11,7 +11,7 @@ require './PHPMailer/src/SMTP.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
     $name = $_POST['name'];
-    $email = $_POST['email'];
+    $email = 'ravindupbalasooriya@gmail.com';
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
