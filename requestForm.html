@@ -8,8 +8,9 @@
     <link href="style3.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    
 </head>
 
 <body>
@@ -19,6 +20,7 @@
                 <div class="card card1">
                     <div class="row justify-content-center my-auto">
                         <div class="col-md-8 col-10 my-5">
+                            <form action="request.php" method="post">
                             <!-- <div class="row justify-content-center px-3 mb-3">
                                 <img id="logo" src="https://i.imgur.com/PSXxjNY.png">
                             </div>
@@ -37,15 +39,16 @@
                             </div>
                             <div class="form-group" id="customTitleGroup" style="display: none;">
                                 <label class="form-control-label text-muted">Custom Title</label>
-                                <input type="text" id="customTitle" name="customTitle" class="form-control" required>
+                                <input type="text" id="customTitle" name="customTitle" class="form-control">
                             </div>
 
 
                             <div class="form-group">
                                 <label class="form-control-label text-muted">Name</label>
-                                <input type="text" id="Name" name="Name" placeholder="Name" class="form-control" required>
+                                <input type="text" id="name" name="Name" placeholder="Name" class="form-control" required>
                             </div>
                             <div class="form-group">
+                                <div id="email-message" style="display: none; color: red;"></div>
                                 <label class="form-control-label text-muted">Email</label>
                                 <input type="text" id="email" name="email" placeholder="Email" class="form-control" required>
                                 <div class="form-group">
@@ -55,11 +58,11 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label text-muted">Message</label>
-                                <input type="text" id="message" name="message" placeholder="Your message here" class="form-control" required>
+                                <input type="text" id="message" name="message" placeholder="Your message here" class="form-control" class="form-control placeholder-opacity" required>
                             </div>
 
                             <div class="row justify-content-center my-3 px-3">
-                                <button class="btn-block btn-color">Login to Tidi</button>
+                                <button type="submit" class="btn-block btn-color">Request Access</button>
                             </div>
                         </div>
                     </div>
@@ -76,17 +79,80 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('title').addEventListener('change', function () {
-            var customTitleGroup = document.getElementById('customTitleGroup');
-            if (this.value === 'other') {
-                customTitleGroup.style.display = 'block';
-            } else {
-                customTitleGroup.style.display = 'none';
+    <!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="text-align: justify";>
+            Your request for access has been successfully forwarded to Ms. Arunodya Pawuluarachchi. You can expect to receive your access password within the next hour. Please use that password to log in to the website, using your provided email address <span style="color: blue;" id="emailDisplay"></span> as the username. We appreciate your patience. Thank you for your interest.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('title').addEventListener('change', function () {
+        var customTitleGroup = document.getElementById('customTitleGroup');
+        if (this.value === 'other') {
+            customTitleGroup.style.display = 'block';
+        } else {
+            customTitleGroup.style.display = 'none';
+        }
+    });
+
+    document.getElementById('email').addEventListener('blur', function () {
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        var emailInput = this;
+        var emailMessage = document.getElementById('email-message');
+
+        if (!emailPattern.test(emailInput.value)) {
+            emailInput.style.borderColor = 'red';
+            emailMessage.style.display = 'block';
+            emailMessage.textContent = 'Incorrect email format.';
+        } else {
+            emailInput.style.borderColor = '';
+            emailMessage.style.display = 'none';
+        }
+    });
+
+    // Get the form element
+    var form = document.querySelector('form');
+
+    // Add an event listener for the submit event
+    form.addEventListener('submit', function(event) {
+        // Prevent the form from submitting normally
+        event.preventDefault();
+
+        // Get the email input value
+        var email = document.getElementById('email').value;
+
+        // Show the modal
+        $('#successModal').modal('show');
+
+        // Populate the email address in the modal
+        document.getElementById('emailDisplay').textContent = email;
+
+        // Send the form data to the server using AJAX
+        $.ajax({
+            url: 'request.php',
+            type: 'post',
+            data: $(this).serialize(),
+            success: function(response) {
+                console.log(response);
             }
         });
+    });
+</script>
 
-    </script>
 </body>
 
 </html>

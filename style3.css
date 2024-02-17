@@ -2,7 +2,7 @@ body {
     color: #000;
     overflow-x: hidden;
     height: 100%;
-    background-image: linear-gradient(to right, #D500F9, #FFD54F);
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
     background-repeat: no-repeat;
 }
 
@@ -38,6 +38,7 @@ button:focus {
 .card {
     border-radius: 0;
     border: none;
+    
 }
 
 .card1 {
@@ -47,7 +48,7 @@ button:focus {
 
 .card2 {
     width: 50%;
-    background-image: linear-gradient(to right, #FFD54F, #D500F9);
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
 }
 
 #logo {
@@ -85,7 +86,8 @@ button:focus {
 .btn-color {
     border-radius: 50px;
     color: #fff;
-    background-image: linear-gradient(to right, #FFD54F, #D500F9);
+    /* background-color: #A9C9FF; */
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
     padding: 15px;
     cursor: pointer;
     border: none !important;
@@ -93,22 +95,23 @@ button:focus {
 }
 
 .btn-color:hover {
-    color: #fff;
-    background-image: linear-gradient(to right, #D500F9, #FFD54F);
+    color: #161702;
+    /* background-color: #A9C9FF; */
+    background-image: linear-gradient(180deg, #edabe2 0%, #FFBBEC 100%);
 }
 
 .btn-white {
     border-radius: 50px;
-    color: #D500F9;
-    background-color: #fff;
+    color: #fff;
+    background-color: #A9C9FF;
     padding: 8px 40px;
     cursor: pointer;
-    border: 2px solid #D500F9 !important;
+    border: 2px solid  #FFBBEC !important;
 }
 
 .btn-white:hover {
     color: #fff;
-    background-image: linear-gradient(to right, #FFD54F, #D500F9);
+    background-image: linear-gradient(to right, #A9C9FF, #FFBBEC);
 }
 
 a {

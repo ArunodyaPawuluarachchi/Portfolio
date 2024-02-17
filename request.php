@@ -6,41 +6,37 @@ use PHPMailer\PHPMailer\Exception;
 require_once './vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
+    $title = $_POST['title'];
+    $customTitle = $_POST['customTitle'];
+    $name = $_POST['Name'];
     $email = $_POST['email'];
-    $subject = $_POST['subject'];
+    $company = $_POST['company'];
     $message = $_POST['message'];
-
-    // Retrieve the logged-in user's email from the session
-    //session_start();
-    //$loggedInUserEmail = $_SESSION['loggedInUserEmail'];
 
     $mail = new PHPMailer(true);
 
     try {
-        $mail->SMTPDebug =   2;
+        $mail->SMTPDebug =  2;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls'; // Use TLS
-        $mail->Port =   587; // Standard port for TLS
+        $mail->Port =  587; // Standard port for TLS
 
         $mail->Username = 'arunodyapawuluarachchi@gmail.com';
         $mail->Password = 'sqpp xqax wkrv azsg'; // Use an App Password for Gmail
 
         $mail->setFrom($email, $name);
         $mail->addAddress('arunodyapawuluarachchi@gmail.com', 'Arunodya');
-        
-        // Add BCC to the logged-in user's email
-       // $mail->addBCC($loggedInUserEmail);
 
-        //use echo for graphical msg
         $mail->isHTML(true);
-        $mail->Subject = $subject;
+        $mail->Subject = "New Message from {$name}";
         $mail->Body = "
+        <p><strong>Title:</strong> {$title}</p>
+        <p><strong>Custom Title:</strong> {$customTitle}</p>
         <p><strong>Name:</strong> {$name}</p>
         <p><strong>Email:</strong> {$email}</p>
-        <p><strong>Subject:</strong> {$subject}</p>
+        <p><strong>Company:</strong> {$company}</p>
         <p><strong>Message:</strong></p>
         <p>{$message}</p>
         ";
