@@ -26,11 +26,11 @@ try {
             $_SESSION['user'] = $user;
 
             // Send email to the website owner
-            $to = 'owner@example.com'; // Replace with the owner's email address
+            $to = 'arunodyapawuluarachchi@gmail.com'; // Replace with the owner's email address
             $subject = 'New Login Notification';
             $message = "A user with the email {$email} has just logged in.";
-            $headers = 'From: webmaster@example.com' . "\r\n" .
-                       'Reply-To: webmaster@example.com' . "\r\n" .
+            $headers = 'From: arunodyapawuluarachchi@gmail.com' . "\r\n" .
+                       'Reply-To: arunodyapawuluarachchi@gmail.com' . "\r\n" .
                        'X-Mailer: PHP/' . phpversion();
 
             mail($to, $subject, $message, $headers);
