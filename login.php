@@ -35,7 +35,9 @@ try {
             exit();
         } else {
             // Authentication failed
-            echo "Invalid email or password";
+            $_SESSION['error'] = 'Invalid email or password';
+            header('Location: accessReq.html');  // Redirect back to login page
+            exit();
         }
     }
 } catch (PDOException $e) {
