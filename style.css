@@ -12,7 +12,12 @@
     background: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
     box-shadow: -5px 5px 16px #a5bad1,
       5px -5px 16px #ddedff;
-  }
+    overflow: hidden; /* Prevents text from overflowing */
+    text-overflow: ellipsis; /* If the text overflows, it will be truncated with an ellipsis */
+    white-space: nowrap; /* Prevents text from wrapping onto the next line */
+    
+    }
+
   
   .navLink i {
     font-size: 2em;
@@ -678,10 +683,10 @@
     cursor: pointer;
   }
 
-  img:hover {
+  /* img:hover {
     transform: scale(2.2);
     transition: transform  0.5s ease-in-out;
-  }
+  } */
   
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
