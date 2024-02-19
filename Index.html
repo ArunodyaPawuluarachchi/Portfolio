@@ -37,51 +37,51 @@
 </head>
 
 <body>
- <!--Navigation Bar-->
-<div class="position-fixed text-uppercase mb-2 p-2 start-0 text-center top-0 w-100" role="navigation"
-style="z-index:   9999;">
-<div class="smallContainer p-3 shadow-lg rounded">
-    <div class="d-flex align-items-center justify-content-around">
+  <!--Navigation Bar-->
+  <div class="position-fixed text-uppercase mb-2 p-2 start-0 text-center top-0 w-100" role="navigation"
+    style="z-index:   9999;">
+    <div class="smallContainer p-3 shadow-lg rounded">
+      <div class="d-flex align-items-center justify-content-around">
         <!-- Navigation links -->
-        <div class="navLink navLinkActive">
-            <a href="#about" onclick="smoothScroll(this.getAttribute('href'))">
-                <div><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
-                <div class="navLabel" style="font-size: x-small;">About</div>
-            </a>
+        <div class="navLink">
+          <a href="#about" onclick="smoothScroll(this.getAttribute('href'))">
+            <div><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+            <div class="navLabel" style="font-size: x-small;">About</div>
+          </a>
         </div>
         <div class="navLink">
-            <a href="#experience" onclick="smoothScroll(this.getAttribute('href'))">
-                <div><i class="fa fa-briefcase" aria-hidden="true"></i></div>
-                <div class="navLabel" style="font-size: x-small;">Experience</div>
-            </a>
+          <a href="#experience" onclick="smoothScroll(this.getAttribute('href'))">
+            <div><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+            <div class="navLabel" style="font-size: x-small;">Experience</div>
+          </a>
         </div>
         <div class="navLink">
-            <a href="#education" onclick="smoothScroll(this.getAttribute('href'))">
-                <div><i class="fa-brands fa-app-store-ios"></i></div>
-                <div class="navLabel" style="font-size: x-small;">Education</div>
-            </a>
+          <a href="#education" onclick="smoothScroll(this.getAttribute('href'))">
+            <div><i class="fa-brands fa-app-store-ios"></i></div>
+            <div class="navLabel" style="font-size: x-small;">Education</div>
+          </a>
         </div>
         <div class="navLink">
-            <a href="#skills" onclick="smoothScroll(this.getAttribute('href'))">
-                <div><i class="fa fa-laptop" aria-hidden="true"></i></div>
-                <div class="navLabel" style="font-size: x-small;">Skills</div>
-            </a>
+          <a href="#skills" onclick="smoothScroll(this.getAttribute('href'))">
+            <div><i class="fa fa-laptop" aria-hidden="true"></i></div>
+            <div class="navLabel" style="font-size: x-small;">Skills</div>
+          </a>
         </div>
         <div class="navLink">
-            <a href="#projects" onclick="smoothScroll(this.getAttribute('href'))">
-                <div><i class="fa fa-code-fork" aria-hidden="true"></i></div>
-                <div class="navLabel" style="font-size: x-small;">Projects</div>
-            </a>
+          <a href="#projects" onclick="smoothScroll(this.getAttribute('href'))">
+            <div><i class="fa fa-code-fork" aria-hidden="true"></i></div>
+            <div class="navLabel" style="font-size: x-small;">Projects</div>
+          </a>
         </div>
         <div class="navLink">
-            <a href="#contact" onclick="smoothScroll(this.getAttribute('href'))">
-                <div><i class="fa fa-commenting" aria-hidden="true"></i></div>
-                <div class="navLabel" style="font-size: x-small;">Contact</div>
-            </a>
+          <a href="#contact" onclick="smoothScroll(this.getAttribute('href'))">
+            <div><i class="fa fa-commenting" aria-hidden="true"></i></div>
+            <div class="navLabel" style="font-size: x-small;">Contact</div>
+          </a>
         </div>
+      </div>
     </div>
-</div>
-</div>
+  </div>
   <!--Landing Page-->
   <div class="vh-100 d-flex align-items-center"
     style="background-color: #A9C9FF; background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);">
@@ -126,35 +126,28 @@ style="z-index:   9999;">
                   <a href="https://www.linkedin.com/in/arunodya-pawuluarachchi-528b7b21b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     class="profile-card-social__item linkedin" target="_blank">
                     <span class="icon-font">
-                      <svg class="icon">
-                        <use xlink:href="#icon-linkedin"></use>
-                      </svg>
+                      <i class="fab fa-linkedin"></i>
                     </span>
                   </a>
-                  <a href="https://twitter.com/iaMuhammedErdem" class="profile-card-social__item twitter"
-                    target="_blank">
+                  <a href="https://twitter.com/Arunodya_0303" class="profile-card-social__item twitter" target="_blank">
                     <span class="icon-font">
-                      <svg class="icon">
-                        <use xlink:href="#icon-twitter"></use>
-                      </svg>
+                      <i class="fab fa-twitter"></i>
                     </span>
                   </a>
                   <a href="https://github.com/arunodyapawuluarachchi" class="profile-card-social__item github"
                     target="_blank">
                     <span class="icon-font">
-                      <svg class="icon">
-                        <use xlink:href="#icon-github"></use>
-                      </svg>
+                      <i class="fab fa-github"></i>
                     </span>
                   </a>
+
                 </div>
 
                 <div class="profile-card-ctr">
-                  <div>
-                    <a href="mailto:arunodyapawuluarachchi@gmail.com" class="no-underline"> </a>
+                  <a href="mailto:arunodyapawuluarachchi@gmail.com" class="no-underline">
                     <button class="profile-card__button button--blue js-message-btn">Hire Me</button>
-                  </div>
-                  <button class="profile-card__button button--orange">Download My CV</button>
+                  </a>
+                  <button class="profile-card__button button--orange" onclick="downloadCV()">Download My CV</button>
                 </div>
               </div>
             </div>
@@ -187,9 +180,10 @@ style="z-index:   9999;">
                 <div class="profile-card-ctr">
                   <div>
                     <a href="" class="no-underline"></a>
-                    <button class="profile-card__button button--blue js-message-btn">Internship Project</button>
+                    <!-- <button class="profile-card__button button--blue js-message-btn">Internship Project</button> -->
                   </div>
-                  <button class="profile-card__button button--orange">Contact Supervisor</button>
+                  <a href="mailto:arunodyapawuluarachchi@gmail.com" class="no-underline"></a>
+                  <button class="profile-card__button button--orange js-message-btn">Contact Supervisor</button>
                 </div>
               </div>
             </div>
@@ -206,8 +200,8 @@ style="z-index:   9999;">
             <div class="row row-cols-1 row-cols-md-3 g-4">
               <div class="col">
                 <div class="card h-100">
-                  <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
-                    alt="Skyscrapers" />
+                  <!-- <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
+                    alt="Skyscrapers" /> -->
                   <div class="card-body">
                     <h5 class="card-title">Higher Education</h5>
                     <p class="card-text">2020-To Date</p>
@@ -227,15 +221,15 @@ style="z-index:   9999;">
                           <td>Sri Lanka Law College</td>
                           <td>Attornry-At-Law</td>
                         </tr>
-                        <tr>
+                        <tr class="popup-trigger" data-popup-id="popup3">
                           <td>SITC Campus</td>
                           <td>Dip. in Psychology and Counseling</td>
                         </tr>
-                        <tr>
+                        <tr class="popup-trigger" data-popup-id="popup4">
                           <td>SITC Campus</td>
                           <td>Dip. in Human Resource Management and Administration</td>
                         </tr>
-                        <tr>
+                        <tr class="popup-trigger" data-popup-id="popup5">
                           <td> Official(ISC)<sup>2</sup>Cybersecurity(CC)</td>
                           <td> Official(ISC)2 Certified in Cybersecurity(CC)</td>
                         </tr>
@@ -246,8 +240,8 @@ style="z-index:   9999;">
               </div>
               <div class="col">
                 <div class="card h-100">
-                  <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top"
-                    alt="Los Angeles Skyscrapers" />
+                  <!-- <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top"
+                    alt="Los Angeles Skyscrapers" /> -->
                   <div class="card-body">
                     <h5 class="card-title">Secondary Education</h5>
                     <p class="card-text">2011-2019</p>
@@ -278,8 +272,8 @@ style="z-index:   9999;">
               </div>
               <div class="col">
                 <div class="card h-100">
-                  <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top"
-                    alt="Palm Springs Road" />
+                  <!-- <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top"
+                    alt="Palm Springs Road" /> -->
                   <div class="card-body">
                     <h5 class="card-title">Primary Education</h5>
                     <p class="card-text">2006-2011
@@ -638,7 +632,7 @@ style="z-index:   9999;">
   </div>
   <div id="contact" style="z-index: -999; display: flex; justify-content: center; align-items: center; height:  100vh;">
     <section class="bg-light py-5 py-xl-6">
-        <div class="container mb-4 mb-md-5 mb-xl-6" style="min-height:100vh;">
+      <div class="container mb-4 mb-md-5 mb-xl-6" style="min-height:100vh;">
         <div class="wrapper" style="align-content:center; padding-left:100px;">
           <section class="mb-4">
             <h2 class="">CONTACT ME</h2>
@@ -697,6 +691,7 @@ style="z-index:   9999;">
               <img src="ucsc.png" alt="profile card">
             </div>
             <div class="card-body">
+              <img src="ucscmy1.jpg" alt="My Uni" style="height: 400px; width: 300px;">
               <h4>Bachelor of Science Information Systems</h4>
               <h5>University of Colombo School of Computing</h5>
               <p class="card-text">2020-2024</p>
@@ -771,6 +766,7 @@ style="z-index:   9999;">
               <img src="ucsc.png" alt="profile card">
             </div>
             <div class="card-body">
+              <img src="aalmy1.jpeg" alt="My Uni" style="height: 400px; width: 300px;">
               <h4>Attornry-At-Law(Reading)</h4>
               <h5>Sri Lanka Law College</h5>
               <p class="card-text">2022-2025</p>
@@ -778,6 +774,78 @@ style="z-index:   9999;">
             </div>
             <div class="modal-footer">
               <button id="closeButtonPopup2" type="button" class="btn btn-secondary"
+                data-bs-dismiss="popup-container">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup">
+    <div id="popup3" class="popup-container">
+      <div class="popup-content">
+        <div class="card">
+          <div class="card h-100">
+            <div class="profile-card__img">
+              <img src="sitc.jpg" alt="profile card">
+            </div>
+            <div class="card-body">
+              <img src="psymy1.jpeg" alt="My Uni" style="height: 400px; width: 300px;">
+              <h4>Diploma in Psychology and Counseling</h4>
+              <h5>Sciences and Information Technology City Campus</h5>
+              <p class="card-text">2022-2023</p>
+            </div>
+            <div class="modal-footer">
+              <button id="closeButtonPopup3" type="button" class="btn btn-secondary"
+                data-bs-dismiss="popup-container">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup">
+    <div id="popup4" class="popup-container">
+      <div class="popup-content">
+        <div class="card">
+          <div class="card h-100">
+            <div class="profile-card__img">
+              <img src="sitc.jpg" alt="profile card">
+            </div>
+            <div class="card-body">
+              <img src="humy1.jpeg" alt="My Uni" style="height: 400px; width: 300px;">
+              <h4>Diploma in Human Resource Management and Administration</h4>
+              <h5>Sciences and Information Technology City Campus</h5>
+              <p class="card-text">2022-2023</p>
+            </div>
+            <div class="modal-footer">
+              <button id="closeButtonPopup4" type="button" class="btn btn-secondary"
+                data-bs-dismiss="popup-container">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup">
+    <div id="popup5" class="popup-container">
+      <div class="popup-content">
+        <div class="card">
+          <div class="card h-100">
+            <div class="profile-card__img">
+              <img src="isc.png" alt="profile card">
+            </div>
+            <div class="card-body">
+              <img src="ccmy.png" alt="My Uni" style="height: 300px; width: 400px;">
+              <h4>Official(ISC)2 Certified in Cybersecurity(CC)</h4>
+              <h5>The International Information System Security Certification Consortium</h5>
+              <p class="card-text">2023</p>
+            </div>
+            <div class="modal-footer">
+              <button id="closeButtonPopup5" type="button" class="btn btn-secondary"
                 data-bs-dismiss="popup-container">Close</button>
             </div>
           </div>
@@ -817,6 +885,18 @@ style="z-index:   9999;">
     });
 
     document.addEventListener('DOMContentLoaded', function () {
+      var closeButtonPopup5 = document.getElementById('closeButtonPopup5');
+      closeButtonPopup5.addEventListener('click', function () {
+        document.getElementById('popup5').style.display = 'none';
+      });
+      var closeButtonPopup4 = document.getElementById('closeButtonPopup4');
+      closeButtonPopup4.addEventListener('click', function () {
+        document.getElementById('popup4').style.display = 'none';
+      });
+      var closeButtonPopup3 = document.getElementById('closeButtonPopup3');
+      closeButtonPopup3.addEventListener('click', function () {
+        document.getElementById('popup3').style.display = 'none';
+      });
       // Select the specific close button for popup2 using its ID
       var closeButtonPopup2 = document.getElementById('closeButtonPopup2');
       closeButtonPopup2.addEventListener('click', function () {
@@ -830,7 +910,14 @@ style="z-index:   9999;">
       });
     });
 
-
+    function downloadCV() {
+      var link = document.createElement('a');
+      link.href = 'SE_DPAJARUNODYA.pdf';
+      link.download = 'SE_DPAJARUNODYA.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   </script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
